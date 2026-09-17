@@ -1,0 +1,35 @@
+[project]
+name = "notebooks"
+version = "0.1.0"
+description = "Jupyter notebooks for deep learning and AI experiments"
+readme = "README.md"
+authors = [
+    { name = "brian-rey-development", email = "brianrey3@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "pandas>=3.0.5",
+    "scikit-learn>=1.9.1",
+    "scipy>=1.18.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "ipywidgets>=8.1.9",
+    "jupyterlab>=4.6.3",
+    "notebook>=7.6.2",
+    "pre-commit>=4.6.2",
+    "ruff>=0.16.8",
+    "ty>=0.0.81",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "ANN"]
